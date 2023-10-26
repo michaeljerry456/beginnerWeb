@@ -44,3 +44,4 @@ git log --oneline : show the log in one line.
 git show HEAD~1:file1 : show the content of file1 in the last commit.
 
 git restore file1 : restore the file1 in the working area to the last commit.
+after reset, i wrote sth.
