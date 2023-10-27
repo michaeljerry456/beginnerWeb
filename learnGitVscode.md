@@ -75,3 +75,17 @@ so now we understand how to reset to a specific commit in the same branch, but h
 plans: testBranch add new feature, when it succeed a part we merge it into main, little by little. if the main branch collapes, we now know how to rest.
 
 learn check out
+
+pull
+
+pull request maybe is a request to be adopted by the origin author. when you forked a project and made some commit of changes to it on you own forked repository, you will want to pull request.
+
+merge
+
+git merge --abort : abort/undo the merge when you don't want to resolve the conflict.
+
+
+code *files
+
+we can use code *files in terminal to open files in vscode. because code is a environment variable, so we can use it in cmd. so can we using code *file to address the conflict in merging.
+
