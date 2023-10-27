@@ -44,4 +44,34 @@ git log --oneline : show the log in one line.
 git show HEAD~1:file1 : show the content of file1 in the last commit.
 
 git restore file1 : restore the file1 in the working area to the last commit.
-after reset, i wrote sth.
+
+The terms "HEAD," "index," and "working tree" are concepts in Git that refer to different states of your repository, specifically regarding your current commit, your staging area, and your working directory. Understanding these terms is important when using Git commands like git reset or git checkout. Here's what each of these terms means:
+
+HEAD:
+
+Current Commit: HEAD is a reference to the latest commit in your branch. It essentially points to the snapshot of your project at the last commit. When you switch branches or check out a specific commit, you're moving the HEAD to a different commit, effectively changing which snapshot you're working on.
+
+Index (or Staging Area):
+
+The index, also known as the staging area, is a place where you prepare changes for your next commit. When you make changes to your working directory and want to include them in your next commit, you use git add to stage those changes. These staged changes are in the index, waiting to be committed.
+
+Working Tree (or Working Directory):
+
+The working tree, often referred to as the working directory, is where you have the actual files on your local file system. These files can be modified, and these changes can be tracked by Git. When you edit a file in your project, you're making changes in the working tree.
+When you use Git commands like git reset or git checkout with different options, you can specify which of these areas you want to affect:
+
+--soft: When you reset with --soft, you move the HEAD to a different commit but leave your changes in the index and working tree. This is useful when you want to "undo" a commit but keep your changes staged and ready for the next commit.
+
+--mixed (default): This is the default mode for git reset. When you reset with --mixed, you move the HEAD to a different commit, and any changes in the commit you're moving away from are unstaged. Your working tree retains the changes.
+
+--hard: When you reset with --hard, you move the HEAD to a different commit and completely remove all changes from both the index and the working tree. It's a way to discard changes completely, and it should be used with caution because it's not reversible.
+
+In summary, "reset HEAD, index, and working tree" means using the git reset command to change the state of your repository by moving the HEAD (current commit), affecting what's in the index (staging area), and potentially modifying your working directory (local file system). The specific effect depends on the options used with git reset
+
+be attention: after `reset --hard`, when we push new commit to remote repository, we need to use `git push --force` to force push the new commit to remote. otherwise, we will get error message: `Updates were rejected because the tip of your current branch is behind its remote counterpart. Integrate the remote changes (e.g. 'git pull ...') before pushing again.` 
+
+so now we understand how to reset to a specific commit in the same branch, but how to reset to a specific commit in a ohter specific branch?
+
+plans: testBranch add new feature, when it succeed a part we merge it into main, little by little. if the main branch collapes, we now know how to rest.
+
+learn check out
