@@ -1,0 +1,80 @@
+<div class="signDiv col-md" id="second">
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button
+      type="button"
+      class="btn btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#log_in"
+    >
+      登陆
+    </button>
+
+    <div
+      class="modal fade"
+      id="log_in"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div>
+                <label for="username">Username:</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                /><br /><br />
+              </div>
+              <!-- <div>
+                      <label for="email">Email:&nbsp;&emsp;&nbsp;&nbsp;</label>
+                      <input type="email" name="email" required><br><br>
+                  </div> -->
+              <div>
+                <label for="password">Password:&nbsp;</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                /><br /><br />
+              </div>
+              <input type="submit" name="submit" value="login" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-warning">Middle</button>
+    <button type="button" class="btn btn-success">Right</button>
+  </div>
+
+  <div id="user">
+    user:
+    <!-- <?php echo $_SESSION['name'] ?? "guest"; ?> -->
+  </div>
+  <!-- <a href="signup.html" id="signUpHref">sign up/login</a> -->
+</div>
