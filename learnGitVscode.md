@@ -103,10 +103,18 @@ pull
 
 pull request maybe is a request to be adopted by the origin author. when you forked a project and made some commit of changes to it on you own forked repository, you will want to pull request.
 
-merge
+merge  
+
+git merge subBranch -m "msg"
 
 git merge --abort : abort/undo the merge when you don't want to resolve the conflict.
 
 code \*files
 
 we can use code *files in terminal to open files in vscode. because code is a environment variable, so we can use it in cmd. so can we using code *file to address the conflict in merging.
+
+## push
+git branch -vv : check the relationship
+git remote -v : check the settings
+git remote set-url origin  git@github.com:michaeljerry456/beginnerWeb.git : set SSH connection, need other settings.
+
